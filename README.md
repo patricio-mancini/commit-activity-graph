@@ -34,6 +34,16 @@ The CommitActivityGraph connects to the GitHub API at the following endpoint:
 
 The API provides detailed commit activity statistics, allowing the component to visualize and present this data graphically.
 
+## Installation
+
+To run the project locally, run this command:
+
+```
+npm install
+```
+
+Make sure you have `Node.js` version 20 or higher installed on your machine.
+
 ## Scripts
 
 In the project directory, you can run:
