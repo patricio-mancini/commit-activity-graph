@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Commit Activity Graph
 
-## Getting Started
+## Implementation Details
 
-First, run the development server:
+This project fetches and displays commit activity data from the GitHub API using `Next.js` v14. It leverages `server components` for `server actions` and `client components` for interactive UI rendering on the client side.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `Next.js` - v14 for hybrid server-side rendering and client-side rendering.
+- `React` - v18 for building interactive user interfaces.
+- `TypeScript` - Ensures type safety and enhances developer experience.
+- `Styled Components` - Used for styling components with CSS-in-JS.
+- `react-device-detect` - for responsive design based on the user's device.
+- `GitHub API` - Utilized for fetching commit activity data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project structure is organized as follows:
 
-## Learn More
+- `./components`: Contains the CommitActivityGraph component and other reusable React components.
+- `./lib`: Includes utility functions, and API integrations (GitHub API).
+- `./types`: Holds common TypeScript types used across the project.
+- `./public`: Static assets such as images and fonts.
 
-To learn more about Next.js, take a look at the following resources:
+## Commit Activity Graph
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The CommitActivityGraph component fetches and displays commit activity data from the GitHub repository [facebook/react](https://github.com/facebook/react). It renders a graph showing the commit activity over time.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## API Integration
 
-## Deploy on Vercel
+The CommitActivityGraph connects to the GitHub API at the following endpoint:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`https://api.github.com/repos/facebook/react/stats/commit_activity`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The API provides detailed commit activity statistics, allowing the component to visualize and present this data graphically.
+
+## Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Runs the app in the development mode.
+- `npm run build`: Builds the app for production deployment.
+- `npm start`: Starts the production server after a successful build.
+- `npm run lint`: Lints the codebase for coding standards and best practices.
+- `npm test`: Runs tests related to the project using Jest.
